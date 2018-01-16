@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name='allow2',
-      version='0.2',
+      version='0.3',
       description='OpenSource Parental Freedom Platform',
       long_description=readme(),
       classifiers=[
@@ -23,5 +23,5 @@ setup(name='allow2',
       ],
       include_package_data=True,
       zip_safe=False,
-      download_url = 'https://github.com/Allow2/Allow2Python/archive/0.2.tar.gz'
+      download_url = 'https://github.com/Allow2/Allow2Python/archive/0.3.tar.gz'
 )
