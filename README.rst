@@ -1,5 +1,5 @@
-Funniest
---------
+Allow2
+------
 
 To use (with caution), simply do::
 
