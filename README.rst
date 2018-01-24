@@ -3,6 +3,7 @@ Allow2
 
 pip install allow2
 
+refer to https://github.com/Allow2/Allow2.github.io/wiki for more details.
 
 Before the app/device can log any actions or check permissions/etc, you need to first "pair" the device or app:
 
