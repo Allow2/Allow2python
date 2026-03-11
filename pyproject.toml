@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "allow2"
+version = "2.0.0a1"
+description = "Allow2 Device SDK -- Parental Freedom for apps and devices"
+license = {text = "SEE LICENSE IN LICENSE FILE"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Allow2 Pty Ltd"},
+]
+keywords = [
+    "parental-controls",
+    "parental-freedom",
+    "allow2",
+    "screen-time",
+    "device-management",
+    "child-safety",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Framework :: AsyncIO",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+keyring = ["keyring>=25"]
+server = ["aiohttp>=3.9"]
+all = ["keyring>=25", "aiohttp>=3.9"]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "respx>=0.22",
+    "coverage>=7",
+    "mypy>=1.11",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://developer.allow2.com"
+Repository = "https://github.com/Allow2/allow2python"
+Issues = "https://github.com/Allow2/allow2python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/allow2"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
